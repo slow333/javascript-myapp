@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="../styles/common.css" >
+  <link rel="stylesheet" href="../styles/issues.css" >
+  <title>issues</title>
+</head>
+<body>
+
+<div class="header">이슈 사항</div>
+
+<form class="issuesForm">
+  <div class="input-align" style="margin-top: 40px">
+    <div class="title-input-label">
+      <div class="label">제목 </div>
+      <input type="text" class="title-input" placeholder="제목을 입력...">
+    </div>
+    <div class="content-input-label">
+      <div class="label">내용 </div>
+      <input type="text" class="content-input"
+             placeholder="내용을 입력...">
+      <button type="button" class="content-add-btn"
+              onclick="addContentInput()">+</button>
+    </div>
+  </div>
+
+  <div class="issue-btns">
+    <button type="submit" onclick="init"
+            class="submit-btn">내용 저장</button>
+    <button onclick="dataImport()" class="import-btn">IMPORT</button>
+  </div>
+</form>
+
+<div class="container"> </div>
+
+<script src="./issues.js"></script>
+</body>
+</html>

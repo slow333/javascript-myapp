@@ -1,0 +1,85 @@
+* { margin: 0; padding: 0;}
+
+body {
+   min-width: 300px;  font-size: 14px;
+}
+
+.toDoForm, .toDoPopupForm {
+   margin: 40px 10px 0 10px;
+   display: flex;
+   flex-direction: column;
+   align-items: end;
+}
+.date-align {
+   margin-top: 10px; margin-left: 0;
+   display: flex;
+   align-items: center;
+   width: 100%;
+}
+
+#date_start, #date_end {
+   font-size: 1rem;
+   height: 30px;   width: 140px;
+   border-radius: 6px;
+   border: 1px solid gray;
+   padding-left: 4px; padding-right: 4px;
+ }
+
+.wave {
+   font-size: 2rem; font-weight:600;
+   padding: 0 1rem 0 1rem;
+}
+
+.input-and-btn {
+   display: flex;
+   margin: 2px 0 0 0;
+   align-items: center;
+   width: 100%;
+   justify-content: start;
+}
+
+.todo-input {
+   width: 70vw;
+   font-size: 1rem;
+   height: 30px;
+   border-radius: 4px;
+   border: 1px solid gray;
+   padding-left: 8px;
+   margin-right: 10px;
+}
+
+.delete-col { text-align: center;}
+
+.edit-col { text-align: center;}
+
+.collapsible {
+   background-color: #eee;
+   color: #444;
+   cursor: pointer;
+   padding: 8px 0 8px 20px;
+   width: 50%;
+   border: none;
+   margin: 10px 0 0 10px;
+   text-align: center;
+   outline: none;
+   font-size: 15px;
+}
+
+.active, .collapsible:hover {
+   background-color: #aaa;
+   color: #fafafa;
+}
+
+.collapsible-content {
+   font-size: 0.9rem;
+   padding: 10px;
+   margin: 0 10px 0 10px;
+   display: none;
+   overflow: hidden;
+   border: 1px solid #eaeaea;
+}
+
+ul li {
+   margin: 5px 0 5px 16px;
+   list-style-type: circle;
+}

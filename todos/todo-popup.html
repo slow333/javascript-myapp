@@ -1,0 +1,40 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="../styles/common.css">
+  <link rel="stylesheet" href="../styles/todos.css">
+  <title>todos popup</title>
+</head>
+
+<body>
+
+<div class="title">수정하기</div>
+<form class="toDoPopupForm">
+  <div class="date-align">
+    <div><label for="date_start_edit">시작 일</label>
+      <input type="date" id="date_start_edit"
+             max="2030-12-31" min="2022-01-01"
+             class="date_start"></div>
+    <div class="wave">~</div>
+    <div><label for="date_end_edit">종료 일</label>
+      <input type="date" id="date_end_edit"
+             max="2030-12-31" min="2022-01-01"
+             class="date_end"></div>
+  </div>
+  <div class="input-and-btn">
+    <input type="text" placeholder="할일..."
+             id="toDoText-edit" class="todo-input">
+    <button type="submit" onclick="edit()"
+            class="edit-submit-btn"> Edit</button>
+  </div>
+</form>
+
+<script>
+  location.onunload = refreshParent();
+  function refreshParent() {
+    window.opener.location.reload(true);
+  }
+</script>
+<script src="./todo-popup.js"></script>
+</body>
+</html>

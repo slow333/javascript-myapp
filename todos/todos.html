@@ -1,0 +1,87 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="../styles/common.css">
+  <link rel="stylesheet" href="../styles/todos.css">
+  <title>todos</title>
+</head>
+<body>
+
+<div class="title">일일 작업 내역</div>
+
+<form class="toDoForm">
+  <div class="date-align">
+    <div>
+      <label for="date_start">시작 일  ▶ </label>
+      <input type="date" id="date_start"
+             max="2030-12-31" min="2023-01-01" />
+    </div>
+    <div class="wave">~</div>
+    <div>
+      <label for="date_end">종료 일 ▶ </label>
+      <input type="date" id="date_end"
+             max="2030-12-31" min="2023-01-01"/>
+    </div>
+    <button class="submit-btn" style="width: 90px">날짜입력</button>
+  </div>
+
+  <div class="input-and-btn">
+    <div>
+      <input type="text" placeholder="할일..."
+             id="toDoText" class="todo-input" />
+    </div>
+    <button type="submit" onclick="init"
+            class="submit-btn" style="width:80px">입 력</button>
+    <button onclick="dataImport()"
+            id="import" class="import-btn">IMPORT</button>
+  </div>
+</form>
+
+<div class="container">
+  <table style="width:100%">
+    <thead>
+    <tr class="thead-tr">
+      <th width="100px">START</th>
+      <th width="60px">END</th>
+      <th>내용</th>
+      <th width="40px">수정</th>
+      <th width="40px">DEL</th>
+    </tr>
+    </thead>
+    <tbody class="toDoTable">
+    </tbody>
+  </table>
+</div>
+
+<button class="collapsible"> 참고자료</button>
+<div class="collapsible-content">
+  <ul>
+    <li>뭔가 기억할 것 1</li>
+    <li>뭔가 기억할 것 2</li>
+  </ul>
+</div>
+<script src="./todos.js"></script>
+<script>
+  list =[
+    {
+      "start_date": "2023-12-24",
+      "end_date": "2023-12-25",
+      "todo_txt": "할일 시험",
+      "id": 1
+    },
+    {
+      "start_date": "2023-12-24",
+      "end_date": "2023-12-25",
+      "todo_txt": "할일 시험1000123",
+      "id": 2
+    },
+    {
+      "start_date": "2023-12-24",
+      "end_date": "2023-12-25",
+      "todo_txt": "할일 시험3편집 다시편집",
+      "id": 3
+    }
+  ]
+</script>
+</body>
+</html>
